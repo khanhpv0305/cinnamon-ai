@@ -36,6 +36,7 @@ const CreateUserComponent = (props) => {
             <Label for='name'>Name *</Label>
 
             <Input
+              type='text'
               autoFocus
               name='name'
               value={values.name}
@@ -51,6 +52,7 @@ const CreateUserComponent = (props) => {
             <Label for='point'>Point *</Label>
 
             <Input
+              type='text'
               name='point'
               value={values.point}
               onChange={handleChange}
@@ -65,6 +67,7 @@ const CreateUserComponent = (props) => {
             <Label for='level'>Level *</Label>
 
             <Input
+              type='text'
               name='level'
               value={values.level}
               onChange={handleChange}
@@ -79,6 +82,7 @@ const CreateUserComponent = (props) => {
             <Label for='star'>Star *</Label>
 
             <Input
+              type='text'
               name='star'
               value={values.star}
               onChange={handleChange}

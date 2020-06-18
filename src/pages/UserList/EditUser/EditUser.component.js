@@ -39,6 +39,7 @@ const EditUserComponent = (props) => {
             <Label for='name'>Name *</Label>
 
             <Input
+              type='text'
               autoFocus
               name='name'
               value={values.name}
@@ -54,6 +55,7 @@ const EditUserComponent = (props) => {
             <Label for='point'>Point *</Label>
 
             <Input
+              type='text'
               name='point'
               value={values.point}
               onChange={handleChange}
@@ -68,6 +70,7 @@ const EditUserComponent = (props) => {
             <Label for='level'>Level *</Label>
 
             <Input
+              type='text'
               name='level'
               value={values.level}
               onChange={handleChange}
@@ -82,6 +85,7 @@ const EditUserComponent = (props) => {
             <Label for='star'>Star *</Label>
 
             <Input
+              type='text'
               name='star'
               value={values.star}
               onChange={handleChange}
