@@ -25,7 +25,12 @@ export default ({
   handleCreate,
 }) => {
   const formik = useFormik({
-    initialValues: {},
+    initialValues: {
+      name: '',
+      point: '',
+      level: '',
+      star: '',
+    },
     onSubmit: handleCreate,
     validationSchema,
     validateOnBlur: false,
