@@ -19,8 +19,8 @@ const UserTableComponent = (props) => {
           <th>Name</th>
           <th>Point</th>
           <th>Level</th>
-          <th>Star</th>
-          <th>Actions</th>
+          <th style={{ width: '133px' }}>Star</th>
+          <th style={{ width: '122px' }}>Actions</th>
         </tr>
       </thead>
 
