@@ -1,1 +1,1 @@
-export const btnRadius = '5'
+export const btnRadius = 5

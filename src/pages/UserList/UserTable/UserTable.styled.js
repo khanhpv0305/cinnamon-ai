@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FaStar } from 'react-icons/fa'
 
 import Table from '../../../components/Table'
+import { btnRadius } from '../../../constants/style.constant'
 
 const UserTable = styled(Table)`
   margin-bottom: 0;
@@ -15,7 +16,7 @@ UserTable.LevelPoint = styled.div`
   margin-bottom: 3px;
 `
 
-const levelBarHeight = '5'
+const levelBarHeight = 5
 
 const getLevelBarColor = (level) => {
   if (level < 0.25) return 'red'
@@ -49,6 +50,32 @@ UserTable.Star = styled(FaStar)`
 
   &:not(:last-child) {
     margin-right: 3px;
+  }
+`
+
+UserTable.ActionBtns = styled.div`
+  display: inline-block;
+`
+
+UserTable.ActionBtn = styled.button`
+  border: none;
+  border-radius: ${btnRadius}px;
+  color: #6992FF;
+  background: #F3F6F9;
+  transition: all 0.2s;
+  height: 32px;
+  width: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(:last-child) {
+    margin-right: 7px;
+  }
+
+  &:hover, &:focus {
+    background: #6992FF;
+    color: white;
   }
 `
 

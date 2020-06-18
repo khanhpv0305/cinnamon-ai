@@ -1,11 +1,14 @@
 import React from 'react'
+import { FaEdit, FaTrash } from 'react-icons/fa'
 
 import UserTable from './UserTable.styled'
 import { formatNumber } from '../../../helpers/number.helper'
 
-const TableComponent = (props) => {
+const UserTableComponent = (props) => {
   const {
     userList,
+    handleToggleConfirmForm,
+    handleToggleEditForm,
   } = props
 
   return (
@@ -24,6 +27,7 @@ const TableComponent = (props) => {
       <tbody>
         {userList.map((user, index) => {
           const {
+            id,
             name,
             point,
             level,
@@ -33,11 +37,11 @@ const TableComponent = (props) => {
           const stars = []
 
           for (let i = 0; i < star; i++) {
-            stars.push(<UserTable.Star />)
+            stars.push(<UserTable.Star key={i} />)
           }
 
           return (
-            <tr>
+            <tr key={id}>
               <td>{index + 1}</td>
               <td>{name}</td>
               <td>{formatNumber(point)}</td>
@@ -49,6 +53,13 @@ const TableComponent = (props) => {
                 </UserTable.Level>
               </td>
               <td>{stars}</td>
+              <td>
+                <UserTable.ActionBtns>
+                  <UserTable.ActionBtn onClick={handleToggleEditForm(id)}><FaEdit /></UserTable.ActionBtn>
+
+                  <UserTable.ActionBtn onClick={handleToggleConfirmForm(id)}><FaTrash /></UserTable.ActionBtn>
+                </UserTable.ActionBtns>
+              </td>
             </tr>
           )
         })}
@@ -57,4 +68,4 @@ const TableComponent = (props) => {
   )
 }
 
-export default TableComponent
+export default UserTableComponent

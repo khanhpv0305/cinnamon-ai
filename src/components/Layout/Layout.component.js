@@ -8,11 +8,13 @@ const LayoutComponent = ({ children, ...restProps }) => (
   <Layout {...restProps}>
     <Header />
 
-    <Layout.Main>
-      {children}
-    </Layout.Main>
+    <Layout.MainAndFooterWrapper>
+      <Layout.Main>
+        {children}
+      </Layout.Main>
 
-    <Footer />
+      <Footer />
+    </Layout.MainAndFooterWrapper>
   </Layout>
 )
 

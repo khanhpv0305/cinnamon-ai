@@ -9,13 +9,17 @@ import Logo from '../../../static/logo.png'
 
 const HeaderComponent = () => (
   <Header>
-    <Header.ContentWrapper>
-      <Container>
+    <Container>
+      <Header.ContentWrapper>
         <Header.Logo src={Logo} alt='Cinnamon AI logo' />
-      </Container>
-    </Header.ContentWrapper>
 
-    <Header.Separator />
+        <Header.Nav>
+          <Header.NavItem href='#' className='active'>Nav 1</Header.NavItem>
+          <Header.NavItem href='#'>Nav 2</Header.NavItem>
+          <Header.NavItem href='#'>Nav 3</Header.NavItem>
+        </Header.Nav>
+      </Header.ContentWrapper>
+    </Container>
   </Header>
 )
 
