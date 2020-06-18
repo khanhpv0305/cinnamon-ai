@@ -29,6 +29,7 @@ const EditUserComponent = (props) => {
       isOpen={showEditForm}
       toggle={handleToggleEditForm()}
       onClosed={handleReset}
+      autoFocus={false}
     >
       <BsForm onSubmit={handleSubmit}>
         <ModalHeader>Edit user</ModalHeader>
@@ -38,6 +39,7 @@ const EditUserComponent = (props) => {
             <Label for='name'>Name *</Label>
 
             <Input
+              autoFocus
               name='name'
               value={values.name}
               onChange={handleChange}

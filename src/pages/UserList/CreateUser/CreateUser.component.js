@@ -26,6 +26,7 @@ const CreateUserComponent = (props) => {
       isOpen={showAddForm}
       toggle={handleToggleAddForm}
       onClosed={handleReset}
+      autoFocus={false}
     >
       <BsForm onSubmit={handleSubmit}>
         <ModalHeader>Add user</ModalHeader>
@@ -35,6 +36,7 @@ const CreateUserComponent = (props) => {
             <Label for='name'>Name *</Label>
 
             <Input
+              autoFocus
               name='name'
               value={values.name}
               onChange={handleChange}
